@@ -1,0 +1,92 @@
+GIT
+  remote: https://github.com/open-telemetry/opentelemetry-ruby
+  revision: e7361a21513fc6cee237a04b7260010bad42e885
+  ref: e7361a21513fc6cee237a04b7260010bad42e885
+  glob: adapters/mysql2/*.gemspec
+  specs:
+    opentelemetry-adapters-mysql2 (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+
+PATH
+  remote: .
+  specs:
+    phoenix_distributed_tracing (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.4.4)
+    opencensus (0.5.0)
+    opencensus-jaeger (0.2.3)
+      opencensus (~> 0.5.0)
+      thrift (~> 0.11.0)
+    opentelemetry-adapters-all (0.4.1)
+      opentelemetry-adapters-concurrent_ruby (~> 0.4.0)
+      opentelemetry-adapters-ethon (~> 0.4.0)
+      opentelemetry-adapters-excon (~> 0.4.0)
+      opentelemetry-adapters-faraday (~> 0.4.0)
+      opentelemetry-adapters-net_http (~> 0.4.0)
+      opentelemetry-adapters-rack (~> 0.4.0)
+      opentelemetry-adapters-redis (~> 0.4.0)
+      opentelemetry-adapters-restclient (~> 0.4.0)
+      opentelemetry-adapters-sidekiq (~> 0.4.0)
+      opentelemetry-adapters-sinatra (~> 0.4.1)
+    opentelemetry-adapters-concurrent_ruby (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-ethon (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-excon (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-faraday (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-net_http (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-rack (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-redis (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-restclient (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-adapters-sidekiq (0.4.0)
+      opentelemetry-api (~> 0.0)
+    opentelemetry-adapters-sinatra (0.4.1)
+      opentelemetry-api (~> 0.4.0)
+    opentelemetry-api (0.4.0)
+    opentelemetry-exporters-jaeger (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+      thrift
+    opentelemetry-sdk (0.4.0)
+      opentelemetry-api (~> 0.4.0)
+    rake (12.3.3)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.2)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.3)
+    thrift (0.11.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  opencensus
+  opencensus-jaeger
+  opentelemetry-adapters-all
+  opentelemetry-adapters-mysql2!
+  opentelemetry-api
+  opentelemetry-exporters-jaeger
+  opentelemetry-sdk
+  phoenix_distributed_tracing!
+  rake (~> 12.0)
+  rspec (~> 3.0)
+
+BUNDLED WITH
+   2.1.4
