@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   # Following line is not working. Have to install it in the app directly until a GA gem is out.
   #spec.add_dependency 'opentelemetry-adapters-mysql2', git: 'https://github.com/open-telemetry/opentelemetry-ruby', ref: 'e7361a21513fc6cee237a04b7260010bad42e885', glob: 'adapters/mysql2/*.gemspec'
 
+  # Opencesnus can be removed once we have a rails adapter from opentelemetry-ruby
   spec.add_dependency 'opencensus'
   spec.add_dependency 'opencensus-jaeger'
 end
