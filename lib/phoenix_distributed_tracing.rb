@@ -1,6 +1,6 @@
 require "phoenix_distributed_tracing/version"
 
-require 'opentelemetry-adapters-all'
+#require 'opentelemetry-adapters-all'
 require 'opencensus-jaeger'
 
 module PhoenixDistributedTracing
@@ -8,10 +8,12 @@ module PhoenixDistributedTracing
   # Your code goes here...
 end
 
+# Revisit this when OpenTelemetry provides support for rails.
+=begin
 # Spanning all controller action calls
 ActionController::API.class_eval do
 
-  around_action :wrap_in_opentelemetry_span
+  #around_action :wrap_in_opentelemetry_span
 
   def wrap_in_opentelemetry_span
     tracer = OpenTelemetry.tracer_provider.tracer()
@@ -22,3 +24,4 @@ ActionController::API.class_eval do
     end
   end
 end
+=end

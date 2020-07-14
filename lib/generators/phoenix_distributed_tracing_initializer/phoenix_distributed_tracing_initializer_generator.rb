@@ -9,6 +9,9 @@ class PhoenixDistributedTracingInitializerGenerator < Rails::Generators::Base
     def create_phoenix_distributed_tracing_initializer
       initializer "phoenix_distributed_tracing.rb" do <<~HEREDOC
 
+# Only relying on OpenCensus for now. Disabling OpenTelemetry.
+# Will revisit once Open Telemetry adds support for rails.
+=begin
 require 'opentelemetry/sdk'
 require 'opentelemetry/exporters/jaeger'
 
@@ -25,8 +28,9 @@ OpenTelemetry::SDK.configure do |c|
   )
 
   # Which adapters to use?
-  c.use_all
+  # c.use_all
 end
+=end
 
 OpenCensus.configure do |c|
   c.trace.exporter = OpenCensus::Trace::Exporters::JaegerExporter.new(
